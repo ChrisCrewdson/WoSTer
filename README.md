@@ -8,6 +8,13 @@ SLACK_BOT_TOKEN="***"
 SLACK_APP_TOKEN="***"
 ```
 
+## Requirements
+1. Categorize work hours by date, person, task
+2. Track banked hours (max=24) and apply them as needed to months that are short
+3. Report showing status for each member: current hours, banked hours, hours owed
+4. Monthly reminder to submit hours
+
+
 ## TODO
 
 add this form:
