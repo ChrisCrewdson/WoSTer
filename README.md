@@ -13,6 +13,7 @@ SLACK_APP_TOKEN="***"
 2. Track banked hours (max=24) and apply them as needed to months that are short
 3. Report showing status for each member: current hours, banked hours, hours owed
 4. Monthly reminder to submit hours
+  4a. Button to get a report sent as a DM
 
 
 ## TODO
