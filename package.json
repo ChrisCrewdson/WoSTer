@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --check .",
+    "prettier:write": "prettier --write .",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +14,8 @@
   "dependencies": {
     "@slack/bolt": "^3.12.2",
     "dotenv": "16.0.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.0"
   }
 }

@@ -1,6 +1,6 @@
-const { App } = require('@slack/bolt');
+const { App } = require("@slack/bolt");
 
-require('dotenv').config();
+require("dotenv").config();
 
 // Initializes your app with your bot token and signing secret
 const app = new App({
@@ -8,34 +8,34 @@ const app = new App({
   signingSecret: process.env.SLACK_SIGNING_SECRET,
   socketMode: true,
   appToken: process.env.SLACK_APP_TOKEN,
-  port: process.env.PORT || 3000
+  port: process.env.PORT || 3000,
 });
 
-app.message('hello', async ({ message, say }) => {
+app.message("hello", async ({ message, say }) => {
   // say() sends a message to the channel where the event was triggered
   await say({
     blocks: [
       {
-        "type": "section",
-        "text": {
-          "type": "mrkdwn",
-          "text": `Hey there <@${message.user}>!`
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: `Hey there <@${message.user}>!`,
         },
-        "accessory": {
-          "type": "button",
-          "text": {
-            "type": "plain_text",
-            "text": "Click Me"
+        accessory: {
+          type: "button",
+          text: {
+            type: "plain_text",
+            text: "Click Me",
           },
-          "action_id": "button_click"
-        }
-      }
+          action_id: "button_click",
+        },
+      },
     ],
-    text: `Hey there <@${message.user}>!`
+    text: `Hey there <@${message.user}>!`,
   });
 });
 
-app.action('button_click', async ({ body, ack, say }) => {
+app.action("button_click", async ({ body, ack, say }) => {
   // Acknowledge the action
   await ack();
   await say(`<@${body.user.id}> clicked the button`);
@@ -45,5 +45,5 @@ app.action('button_click', async ({ body, ack, say }) => {
   // Start your app
   await app.start();
 
-  console.log('⚡️ Bolt app is running!');
+  console.log("⚡️ Bolt app is running!");
 })();
