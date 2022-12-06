@@ -16,6 +16,9 @@ Clone:
 Install dependencies:
 `npm i`
 
+Start:
+`npm run start`
+
 ## Requirements
 
 1. Categorize work hours by date, person, task
